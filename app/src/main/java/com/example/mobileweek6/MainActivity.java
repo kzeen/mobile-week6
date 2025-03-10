@@ -1,6 +1,8 @@
 package com.example.mobileweek6;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FF8752")));
+        getSupportActionBar().setTitle("My Default Action Bar");
     }
 
     @Override
