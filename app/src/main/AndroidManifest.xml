@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
+            android:name=".SecondActivity"
+            android:theme="@style/Theme.MobileWeek6Second"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.MobileWeek6"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.MobileWeek6">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

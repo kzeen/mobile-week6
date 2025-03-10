@@ -1,7 +1,10 @@
 package com.example.mobileweek6;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +29,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.id_menu_call) {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            startActivity(intent);
+        }
+        if (item.getItemId() == R.id.id_menu_next) {
+            Intent intent = new Intent(this, SecondActivity.class);
+            startActivity(intent);
+        }
+        if (item.getItemId() == R.id.id_menu_settings) {
+            Toast.makeText(this, "Settings Action", Toast.LENGTH_SHORT).show();
+        }
         return true;
     }
 }
