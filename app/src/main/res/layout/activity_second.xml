@@ -19,5 +19,11 @@ tools:context=".SecondActivity">
         app:layout_collapseMode="pin"
         app:title="Countries List" />
 </com.google.android.material.appbar.AppBarLayout>
+    
+    <ListView
+        android:id="@+id/lv_countries"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
