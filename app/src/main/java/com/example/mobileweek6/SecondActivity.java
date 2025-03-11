@@ -1,6 +1,7 @@
 package com.example.mobileweek6;
 
 import android.os.Bundle;
+import android.view.Menu;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,5 +24,12 @@ public class SecondActivity extends AppCompatActivity {
 
         setSupportActionBar(findViewById(R.id.my_toolbar)); // Used to set custom action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Adds a back button, parent (where we go back to) defined in manifest
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search_menu, menu);
+
+        return true;
     }
 }
