@@ -20,5 +20,8 @@ public class SecondActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        setSupportActionBar(findViewById(R.id.my_toolbar)); // Used to set custom action bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Adds a back button, parent (where we go back to) defined in manifest
     }
 }
