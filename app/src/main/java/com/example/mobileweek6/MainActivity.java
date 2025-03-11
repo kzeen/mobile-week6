@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -51,5 +52,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Settings Action", Toast.LENGTH_SHORT).show();
         }
         return true;
+    }
+
+    public void launch_second_activity(View v) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }
